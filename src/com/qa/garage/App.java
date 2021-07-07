@@ -15,8 +15,14 @@ public class App {
 		garage.addVehicle(car1);
 		garage.addVehicle(bike1);
 		garage.addVehicle(plane1);
-		garage.listVehicles();
 		
+		garage.rmVehicleType("Car");
+		
+
+		
+		System.out.println(garage.fixSpecVec("Sizuki"));
+		System.out.println(garage.fixVehicle());
+		garage.emptyGarage();
 		
 		
 	}

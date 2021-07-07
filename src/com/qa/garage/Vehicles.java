@@ -85,6 +85,8 @@ public abstract class Vehicles{
 		System.out.println(getColour());
 		System.out.print("Year: ");
 		System.out.println(getYear());
+		System.out.print("Engine: ");
+		System.out.println(getEngine());
 		
 		}
 	
@@ -95,6 +97,10 @@ public abstract class Vehicles{
 		
 		return fix;
 		
+	}
+	
+	public void printfix() {
+		System.out.println("cost:" + fix());
 	}
 	
 	public abstract void horn();

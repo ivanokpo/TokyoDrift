@@ -8,6 +8,8 @@ public class Garage {
 
 	
 		ArrayList<Vehicles> vehicles =  new ArrayList<>();
+		ArrayList<Vehicles> garbage = new ArrayList<>();
+		
 		
 		public void addVehicle(Vehicles vehicle ) {
 			this.vehicles.add(vehicle);
@@ -23,7 +25,7 @@ public class Garage {
 			if(vehicles.get(i).getMake() == make) {
 				bill += vehicles.get(i).fix();
 			}
-				return vehicles.get(i).fix();
+				
 			}
 			return bill;
 		}
@@ -65,10 +67,20 @@ public class Garage {
 			this.vehicles.remove(vehicle);
 		}
 		
-		
-		
-		
+		public void rmVehicleType(String type) {
+			for (int i = 0 ; i < vehicles.size(); i++) {
+				
+				if (vehicles.get(i).getClass().getSimpleName().equals(type)) {
+					
+					this.vehicles.remove(i);
+				}
+			}
 		
 		
 		}
+		
+		public void emptyGarage() {
+			vehicles.clear();
+		}
+}
 		
